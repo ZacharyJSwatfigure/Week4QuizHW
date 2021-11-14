@@ -95,6 +95,7 @@ getNewQuestion = () => {
     })
 
     availableQuestions.splice(questionsIndex, 1)
+    
     acceptingAnswer = true
 }
 

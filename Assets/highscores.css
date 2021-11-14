@@ -1,0 +1,18 @@
+:root {
+    --darkbg: rgb(32, 11, 11);
+    --textmainblue: rgb(97, 186, 221);
+    --correct: rgb(136, 204, 97);
+    --incorrect: rgb(204, 97, 97);
+
+}
+
+
+body {
+    color: goldenrod;
+}
+
+
+#highScoresList {
+    list-style: none;
+    margin-bottom: 8px;
+}
