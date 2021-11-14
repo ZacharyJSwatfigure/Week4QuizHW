@@ -14,7 +14,7 @@ let availableQuestions = []
 let questions = [
 
     {
-        question: 'How fast was the first perosn convicted of a speeding violation going?',
+        question: 'How fast was the first person tp be convicted of a speeding violation going?',
         choice1: "35mph",
         choice2: "103mph",
         choice3: "26mph",
@@ -37,7 +37,7 @@ let questions = [
         choice2: "2Tril lLbs",
         choice3: "1Bil Lbs",
         choice4: "6Mil Lbs",
-        answer: 4,
+        answer: 3,
     },
 
     {
@@ -55,7 +55,7 @@ let questions = [
         choice2: "Hair",
         choice3: "Feint Mustaches and beards",
         choice4: "Toes",
-        answer: 4,
+        answer: 1,
     },
 ]
 
@@ -120,7 +120,7 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 1000)
+        }, 200)
 
 })
 })
