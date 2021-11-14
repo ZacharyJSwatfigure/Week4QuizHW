@@ -7,7 +7,7 @@ const highScores = JSON.parse(localStorage.getItem("highScores")) || []
 
 const maxHighScore = 5
 
-finalScore.innertext = mostRecentScore
+finalScore.innerText = mostRecentScore
 
 username.addEventListener("keyup", () =>{
 
