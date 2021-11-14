@@ -1,5 +1,5 @@
-; root {
-    --darkbg: rgb(63, 15, 15);
+:root {
+    --darkbg: rgb(32, 11, 11);
     --textmainblue: rgb(97, 186, 221);
     --correct: rgb(136, 204, 97);
     --incorrect: rgb(204, 97, 97);
@@ -12,6 +12,7 @@
     padding: 0;
     font-size: 30px;
     font-family: 'Yuji Boku', serif;
+    background-color: var(--darkbg);
 }
 
 h1 {
@@ -27,11 +28,15 @@ h2 {
 
 .container {
     width: 100vw;
-    height: 100vh;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px
+    padding: 10px;
+}
+
+#whenreadytext {
+    color: red;
 }
 
 .flex-column {
@@ -60,12 +65,36 @@ h2 {
 
 .btn {
     font-size: 30px;
-    padding: 32px;
+    padding: 10px;
     width: 500px;
     text-align: center;
     margin-bottom: 16px;
     text-decoration: none;
-    color: var(--textmainblue);
-    background: var(--darkbg);
+    color: gold;
+    background: solid var(black);
+    border-radius: 10px;
 }
 
+
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 20px 1.4rem 20px rgba(193, 244, 8, 0.6);
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-btn {
+    background-color: gold;
+    color: rgb(206, 121, 65);
+}
+
+#takequizbtn{
+    background-color:rgb(206, 121, 65);
+}
