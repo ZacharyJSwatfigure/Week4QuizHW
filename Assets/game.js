@@ -70,6 +70,9 @@ startQuiz = () => {
 }
 
 getNewQuestion = () => {
+
+    console.log("getNewQuestion")
+
     if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
 
         localStorage.setItem("mostRecentScore", score)
@@ -100,18 +103,22 @@ getNewQuestion = () => {
 }
 
 choices.forEach(choice => {
+
+
     choice.addEventListener("click", e => {
+        console.log("Hello")
         if (!acceptingAnswer) return
 
         acceptingAnswer = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset["number"]
 
-        let classToApply = selectedAnswer == currentQuestion.answer ? "correct" :
-            "incorrect"
-
-        if (classToApply === "correct") {
-            incrementScore(scorePoints)
+            
+        if(selectedAnswer == currentQuestion.answer) {
+            classToApply = "correct";
+            incrementScore(scorePoints);
+        } else {
+            classToApply="incorrect"
         }
 
         selectedChoice.parentElement.classList.add(classToApply)
@@ -120,7 +127,9 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
 
-        }, 200)
+        })
+
+
 
 })
 })
